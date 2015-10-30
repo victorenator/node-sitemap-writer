@@ -1,5 +1,5 @@
 # SitemapWriter for Node.js  
-Based on XMLWriter (Inist-CNRS/node-xml-writer)
+Based on XMLWriter (https://github.com/Inist-CNRS/node-xml-writer)
 
 
 ## Installation
