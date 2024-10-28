@@ -8,17 +8,17 @@ npm install sitemap-daemon
 ```
 
 ## Example
-```es6
+```js
 import {SitemapWriter} from 'sitemap-writer'
 
-var w = new SitemapWriter();
+const w = new SitemapWriter();
 w.startDocument()
-w.startURLSet();
-w.writeURL({loc: '/'});
-w.startURL({loc: '/abc'});
-w.writeImage({loc: '/img/1.jpg'});
-w.endURL();
-w.endURLSet();
+  w.startURLSet();
+    w.writeURL({loc: '/'});
+    w.startURL({loc: '/abc'});
+      w.writeImage({loc: '/img/1.jpg'});
+    w.endURL();
+  w.endURLSet();
 w.endDocument();
 
 console.log('sitemap: %s', w.toString());

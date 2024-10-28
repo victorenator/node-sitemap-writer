@@ -1,24 +1,33 @@
 {
     "name": "sitemap-writer",
-    "version": "1.0.0",
-    
+    "version": "1.1.0",
+    "type": "module",
+    "exports": {
+        ".": "./index.js"
+    },
+    "dependencies": {
+        "xml-writer": "^1.7.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.13.0",
+        "eslint": "^9.13.0",
+        "globals": "^15.11.0"
+    },
     "author": {
         "name": "Viktar Vauchkevich",
         "email": "victorenator@gmail.com"
     },
     "license": "MIT",
-    
-    "dependencies": {
-        "xml-writer": "1"
-    },
-    
-    "keywords": ["sitemap", "writer", "es6"],
+    "keywords": [
+        "sitemap",
+        "writer"
+    ],
     "homepage": "https://github.com/victorenator/node-sitemap-writer",
     "repository": {
         "type": "git",
-        "url": "https://github.com/victorenator/node-sitemap-writer.git"
+        "url": "git+https://github.com/victorenator/node-sitemap-writer.git"
     },
     "engines": {
-        "node": ">=2"
+        "node": ">=18"
     }
 }

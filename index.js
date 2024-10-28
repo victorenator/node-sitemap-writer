@@ -1,7 +1,8 @@
-import assert from 'assert';
+import {ok} from 'node:assert';
 import XMLWriter from 'xml-writer';
 
 export class SitemapWriter extends XMLWriter {
+
     constructor(ident, writer) {
         super(ident, writer);
         XMLWriter.call(this, ident, writer);
@@ -16,8 +17,8 @@ export class SitemapWriter extends XMLWriter {
     }
     
     startURL(uri) {
-        assert.ok(uri);
-        assert.ok(uri.loc);
+        ok(uri);
+        ok(uri.loc);
         
         this.startElement('url');
         this.writeElement('loc', uri.loc);
@@ -43,8 +44,8 @@ export class SitemapWriter extends XMLWriter {
     }
     
     startImage(img) {
-        assert.ok(img);
-        assert.ok(img.loc);
+        ok(img);
+        ok(img.loc);
         
         this.startElement('image').writeAttribute('xmlns', 'http://www.google.com/schemas/sitemap-image/1.1');
         this.writeElement('loc', img.loc);
@@ -74,6 +75,7 @@ export class SitemapWriter extends XMLWriter {
 }
 
 export class SitemapIndexWriter extends XMLWriter {
+
     constructor(ident, writer) {
         super(ident, writer);
         XMLWriter.call(this, ident, writer);
@@ -88,8 +90,8 @@ export class SitemapIndexWriter extends XMLWriter {
     }
     
     startSitemap(sitemap) {
-        assert.ok(sitemap);
-        assert.ok(sitemap.loc);
+        ok(sitemap);
+        ok(sitemap.loc);
         
         this.startElement('sitemap');
         this.writeElement('loc', sitemap.loc);
